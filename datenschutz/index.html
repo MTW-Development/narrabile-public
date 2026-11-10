@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Datenschutzerklärung – Narrabile</title>
+  <meta name="description" content="Welche Daten die Wörterbuch-App Narrabile verarbeitet, wozu und wie lange.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="page">
+  <header>
+    <p class="brand"><a href="../">Narrabile</a></p>
+    <h1>Datenschutzerklärung</h1>
+    <p class="meta">Stand: 10. November 2026</p>
+  </header>
+
+  <main>
+    <section class="summary" aria-labelledby="kurz">
+      <h2 id="kurz">Das Wichtigste in Kürze</h2>
+      <ul>
+        <li>Das Wörterbuch funktioniert vollständig offline. Was Sie in der App anlegen – Favoriten, Verlauf, Sammlungen,
+          Lernfortschritt und Einstellungen –, bleibt auf Ihrem Gerät.</li>
+        <li>Kein Konto, keine Werbung, kein Tracking, keine Nutzungsanalyse, keine Absturzberichte.</li>
+        <li>Nur beim ersten Start verbindet sich die App einmal mit unserem Server, um das Wörterbuch freizuschalten.
+          Google Play bestätigt dabei, dass die App echt ist. Wir speichern nichts, was auf Sie schließen lässt.</li>
+      </ul>
+    </section>
+
+    <nav aria-labelledby="inhalt">
+      <h2 id="inhalt">Inhalt</h2>
+      <ol>
+        <li><a href="#verantwortlicher">Verantwortlicher</a></li>
+        <li><a href="#geraet">Daten auf Ihrem Gerät</a></li>
+        <li><a href="#freischalten">Freischalten des Wörterbuchs</a></li>
+        <li><a href="#verzeichnis">Serververzeichnis</a></li>
+        <li><a href="#google-play">Google Play</a></li>
+        <li><a href="#spaeter">Noch nicht verfügbare Funktionen</a></li>
+        <li><a href="#webseite">Diese Webseite</a></li>
+        <li><a href="#empfaenger">Empfänger und Drittländer</a></li>
+        <li><a href="#rechte">Ihre Rechte</a></li>
+        <li><a href="#aenderungen">Änderungen</a></li>
+      </ol>
+    </nav>
+
+    <section aria-labelledby="verantwortlicher">
+      <h2 id="verantwortlicher">1. Verantwortlicher</h2>
+      <p>Verantwortlich für die Datenverarbeitung im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
+      <address>
+        Matthäus Theodor Winkler<br>
+        Silvester-Früchtl-Gasse 9<br>
+        1230 Wien<br>
+        Österreich<br>
+        E-Mail: <a href="mailto:winkler.matthaeus@gmail.com">winkler.matthaeus@gmail.com</a>
+      </address>
+      <p>Für Fragen zum Datenschutz und um Ihre Rechte auszuüben, genügt eine E-Mail an diese Adresse.</p>
+    </section>
+
+    <section aria-labelledby="geraet">
+      <h2 id="geraet">2. Daten auf Ihrem Gerät</h2>
+      <p>Narrabile speichert Ihre Favoriten, Ihren Such- und Wortverlauf, Ihre Wortsammlungen, Ihren Lernfortschritt im
+        Vokabeltrainer und Ihre Einstellungen ausschließlich auf Ihrem Gerät. Wir erhalten diese Daten nicht.</p>
+      <p><strong>Sicherung durch Android:</strong> Haben Sie in den Android-Einstellungen die Sicherung in Ihr
+        Google-Konto eingeschaltet, nimmt Android diese Daten in die Sicherung auf und kann sie auf ein neues Gerät
+        übertragen. Diese Sicherung betreibt Google für Sie; wir haben darauf keinen Zugriff. Das Wörterbuch selbst ist
+        davon ausgenommen.</p>
+      <p><strong>Löschen:</strong> Sie löschen alle Daten der App, indem Sie in den Android-Einstellungen ihren
+        Speicher leeren oder die App deinstallieren.</p>
+    </section>
+
+    <section aria-labelledby="freischalten">
+      <h2 id="freischalten">3. Freischalten des Wörterbuchs</h2>
+      <p>Die Wörterbuchdaten liegen verschlüsselt in der App. Den Schlüssel gibt unser Server nur an echte, über Google
+        Play bezogene Exemplare der App heraus. Dafür verbindet sich die App beim ersten Start einmal mit unserem Server
+        (und erneut, falls Sie die App-Daten löschen). Danach arbeitet sie offline.</p>
+
+      <h3>Ablauf</h3>
+      <ol>
+        <li>Die App prüft zuerst, ob sie wirklich mit unserem Server spricht: Er muss eine Zufallszahl der App mit
+          seinem geheimen Schlüssel unterschreiben. Erst danach sendet sie ihm etwas anderes.</li>
+        <li>Die App holt sich vom Server eine einmalige Zufallszahl und bittet damit Google Play um eine Bestätigung
+          (Play Integrity API). Google prüft, ob die App unverändert ist und aus Google Play stammt, ob das Google-Konto
+          auf dem Gerät sie über Google Play bezogen hat und ob das Gerät vertrauenswürdig ist. Dafür verarbeitet Google
+          Informationen über Ihr Gerät, die App und Ihr Konto.</li>
+        <li>Die App schickt die verschlüsselte Bestätigung an unseren Server. Er lässt sie von Google entschlüsseln und
+          prüft das Ergebnis automatisch.</li>
+        <li>Passt alles, sendet der Server den Schlüssel, zusätzlich Ende-zu-Ende-verschlüsselt, sodass ihn unterwegs
+          niemand lesen kann. Passt es nicht, zeigt die App, was Sie tun können, etwa die App aus Google Play
+          installieren.</li>
+      </ol>
+      <p>Jede Anfrage enthält außerdem die Versionsnummer der App, damit der Server veralteten Versionen mitteilen kann,
+        dass ein Update nötig ist.</p>
+
+      <h3>Was unser Server verarbeitet</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Daten</th><th scope="col">Zweck</th><th scope="col">Speicherdauer</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ihre IP-Adresse</td>
+              <td>Damit die Antwort Sie erreicht; Begrenzung der Anfragen zum Schutz vor Missbrauch</td>
+              <td>Nur im Arbeitsspeicher und nur als Hashwert mit einem geheimen Zufallsschlüssel; gelöscht spätestens
+                eine Stunde nach Ihrer letzten Anfrage</td>
+            </tr>
+            <tr>
+              <td>Protokolleintrag: Zeitpunkt, aufgerufene Funktion, Ergebnis, Dauer, App-Version und das Prüfergebnis
+                von Google (App echt und lizenziert, Geräteintegrität, Android-Version, Play-Protect-Status)</td>
+              <td>Betrieb, Fehlersuche, Missbrauchsabwehr</td>
+              <td>Statt der IP-Adresse steht darin ein Kennzeichen Ihres Netzwerks. Dessen Schlüssel wird jeden Tag um
+                Mitternacht (UTC) verworfen; danach kann niemand, auch wir nicht, einen Eintrag einer IP-Adresse
+                zuordnen. Alte Einträge werden nach und nach überschrieben.</td>
+            </tr>
+            <tr>
+              <td>Die Zufallszahl der Anfrage</td>
+              <td>Damit eine Bestätigung nicht zweimal verwendet werden kann</td>
+              <td>5 Minuten; ohne Bezug zu Ihnen</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Nicht gespeichert</strong> werden der Inhalt der Anfragen, die Bestätigung von Google, Kennungen Ihres
+        Geräts oder Kontos und Ihre IP-Adresse im Klartext. Bei Störungen, etwa während eines Neustarts, kann das
+        Fehlerprotokoll des Webservers Ihre IP-Adresse und die aufgerufene Adresse enthalten. Es dient nur der
+        Fehlersuche und wird nach spätestens 7 Tagen gelöscht.</p>
+      <p>Den Server betreiben wir selbst, auf eigener Hardware in Österreich; kein Hosting-Anbieter ist beteiligt. Die
+        Namensauflösung (DNS) für seine Adresse übernimmt Cloudflare. Cloudflare erhält dabei nur DNS-Anfragen, in der
+        Regel von Ihrem Internetanbieter, und sieht weder die Verbindung zum Server noch ihren Inhalt.</p>
+      <p><strong>Rechtsgrundlage</strong> ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse ist, die
+        Wörterbuchdaten vor unerlaubtem Kopieren und den Server vor Missbrauch zu schützen. Für die Prüfung durch Google
+        gilt zusätzlich die <a href="https://policies.google.com/privacy?hl=de">Datenschutzerklärung von
+        Google</a>.</p>
+    </section>
+
+    <section aria-labelledby="verzeichnis">
+      <h2 id="verzeichnis">4. Serververzeichnis</h2>
+      <p>Damit die App unseren Server auch nach einem Umzug unter einer neuen Adresse findet, veröffentlichen wir eine
+        von uns unterschriebene Liste der Serveradressen. Die App lädt sie nur, wenn unser Server wiederholt nicht
+        erreichbar ist: von GitHub (<code>raw.githubusercontent.com</code>) oder ersatzweise vom öffentlichen
+        Content-Delivery-Netzwerk jsDelivr (<code>cdn.jsdelivr.net</code>).</p>
+      <p>Wie bei jedem Abruf einer Webseite erhalten diese Anbieter dabei Ihre IP-Adresse und technische Angaben wie den
+        Zeitpunkt; die App sendet keine weiteren Daten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser
+        berechtigtes Interesse ist, dass die Online-Funktionen erreichbar bleiben. Siehe auch die Datenschutzerklärungen
+        von <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">GitHub</a>
+        und <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net">jsDelivr</a>.</p>
+    </section>
+
+    <section aria-labelledby="google-play">
+      <h2 id="google-play">5. Google Play</h2>
+      <p>Sie beziehen Narrabile über Google Play. Für Installation und Updates gelten die
+        <a href="https://policies.google.com/privacy?hl=de">Datenschutzbestimmungen von Google</a>. Ist unser Server
+        dauerhaft nicht zu finden, fragt die App bei Google Play nach, ob ein Update bereitsteht; dabei sendet sie keine
+        eigenen Daten.</p>
+    </section>
+
+    <section aria-labelledby="spaeter">
+      <h2 id="spaeter">6. Noch nicht verfügbare Funktionen</h2>
+      <p>Der KI-Übersetzer und Käufe in der App sind noch nicht verfügbar. Der Übersetzer wird Ihre Texte an unseren
+        Server und von dort an einen KI-Anbieter senden. Bevor eine dieser Funktionen erscheint, ergänzen wir diese
+        Erklärung um alle Einzelheiten.</p>
+    </section>
+
+    <section aria-labelledby="webseite">
+      <h2 id="webseite">7. Diese Webseite</h2>
+      <p>Diese Seite wird über GitHub Pages bereitgestellt. GitHub speichert nach eigener Angabe die IP-Adressen der
+        Besucher zu Sicherheitszwecken. Die Seite selbst lädt keine fremden Inhalte, setzt keine Cookies und verwendet
+        weder Skripte noch Tracking.</p>
+    </section>
+
+    <section aria-labelledby="empfaenger">
+      <h2 id="empfaenger">8. Empfänger und Drittländer</h2>
+      <p>Wir verkaufen keine Daten und geben keine Daten für Werbung weiter. Beteiligt sind nur:</p>
+      <ul>
+        <li><strong>Google</strong> (Play Integrity, Google Play): für Nutzer in der EU Google Ireland Limited, Gordon
+          House, Barrow Street, Dublin 4, Irland. Eine Übermittlung an Google LLC in den USA ist möglich.</li>
+        <li><strong>GitHub, Inc.</strong>, USA: Serververzeichnis und diese Webseite.</li>
+        <li><strong>jsDelivr</strong>: Serververzeichnis, nur ersatzweise. Die Auslieferung übernehmen mehrere
+          CDN-Anbieter, die dabei Ihre IP-Adresse erhalten.</li>
+        <li><strong>Cloudflare</strong>: nur DNS, siehe Abschnitt 3.</li>
+      </ul>
+      <p>Für Übermittlungen in die USA stützen wir uns auf den Angemessenheitsbeschluss der EU-Kommission zum EU-US
+        Data Privacy Framework (Art. 45 DSGVO), soweit der Empfänger danach zertifiziert ist, wie Google LLC und GitHub,
+        Inc.</p>
+    </section>
+
+    <section aria-labelledby="rechte">
+      <h2 id="rechte">9. Ihre Rechte</h2>
+      <p>Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung
+        der Verarbeitung (Art. 18) und Datenübertragbarkeit (Art. 20). Verarbeitungen, die auf unserem berechtigten
+        Interesse beruhen, können Sie widersprechen (Art. 21). Schreiben Sie uns dafür an die E-Mail-Adresse in
+        Abschnitt 1.</p>
+      <p>Unser Server speichert keine Daten, die wir Ihrer Person zuordnen können. Deshalb finden wir zu Ihnen in der
+        Regel nichts (Art. 11 DSGVO). Ihre Daten in der App liegen nur auf Ihrem Gerät und unterliegen allein Ihrer
+        Kontrolle.</p>
+      <p>Sie können sich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO), insbesondere in dem
+        Mitgliedstaat, in dem Sie leben. Für uns zuständig ist die österreichische
+        <a href="https://www.dsb.gv.at/">Datenschutzbehörde</a>, Barichgasse 40–42, 1030 Wien.</p>
+    </section>
+
+    <section aria-labelledby="aenderungen">
+      <h2 id="aenderungen">10. Änderungen</h2>
+      <p>Wir passen diese Erklärung an, wenn sich die App ändert. Alle früheren Fassungen sind in der
+        <a href="https://github.com/MTW-Development/narrabile-public/commits/main/datenschutz/index.html">Versionsgeschichte</a>
+        öffentlich einsehbar.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Narrabile · Wörterbuch Latein ↔ Deutsch</p>
+  </footer>
+</div>
+</body>
+</html>
